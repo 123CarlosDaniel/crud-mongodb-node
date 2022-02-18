@@ -11,3 +11,6 @@ dev dependencies
 dotenv para almacenar varialbes de entorno 
 nodemon 
 handlebars
+
+
+agregando cosas
