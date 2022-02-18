@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.head {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: rgb(180, 58, 58);
+    background: linear-gradient(90deg, rgba(180, 58, 58, 0.5270483193277311) 0%, rgba(253, 100, 29, 0.35057773109243695) 46%, rgba(252, 69, 88, 0.7231267507002801) 100%)
+    ,url(https://elements-video-cover-images-0.imgix.net/files/53eda06b-5538-41f0-bbe9-44776040d9a3/inline_image_preview.jpg?auto=compress%2Cformat&fit=min&h=394&w=700&s=bad59e7c56ad554d6a02d0565fc106db);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.Textos-header{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.Textos-header h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.Textos-header h2 {
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/*Nuestro producto*/
+
+.contenedor-t {
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-t h2 {
+    text-align: center;
+    color: rgb(49, 13, 49);
+    font-size: 35px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0 0 0;
+    width: 100%;
+}
+
+.contenedor img {
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenido {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cont {
+    margin-bottom: 35px;
+}
+
+.cont h3 {
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.cont p {
+    text-align: justify;
+}
+.cont h3 span {
+    display: inline-block;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    background-color: rgb(49, 13, 49);
+}
+
+/* contenedor portafolio */
+
+.portafolio {
+    background: #f2f2f2;
+    width: 100%;
+}
+
+.contenedor-port {
+    margin-top: 35px ;
+    padding: 0 50px;
+    display: grid;
+    grid-template: repeat(2,350px)/ repeat(4,1fr);
+    gap: 25px;
+}
+
+.imagen img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Que dicen nuestros clientes */
+
+.cuadro-clientes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentarios-cont {
+    width: 35%;
+    height: 200px;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.comentarios-cont img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.opiniones {
+    margin-left: 50px;
+}
+
+.opiniones h3 {
+    margin-bottom: 10px;
+}
+
+/* Servicios */
+
+.servicios {
+    background: #f2f2f2;
+}
+
+.servicios-cont {
+
+    padding:0 50px;
+    display: grid;
+    grid-template: 350px/ repeat(3,1fr);
+}
+ 
+.serv-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.serv-item img {
+    margin-bottom: 20px;
+    height: 150px;
+    width: 230px;
+    object-fit: cover;
+}
+
+.textos {
+    width: 85%;
+}
+
+.textos h3 {
+    margin-bottom: 10px;
+}
+
+/* foorter */
+
+footer {
+    background: #414141;
+    color: white;
+}
+.datos {
+    width: 100%;
+    display: grid;
+    grid-template: 55px/repeat(3,1fr);  
+}
+
+.dato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.Nombre {
+    height: 50px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.n {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #af20d3;
+}
