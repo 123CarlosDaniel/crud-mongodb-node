@@ -6,6 +6,7 @@ const methodOverride = require('method-override')
 const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
+const cors = require('cors')
 require('./config/passport')
 //Initializations 
 app = express()
@@ -25,7 +26,7 @@ app.engine(
 app.set('view engine','.hbs')
 
 //middlewares
-
+app.use(cors())
 app.use(express.urlencoded({extended:false}))
 app.use(methodOverride('_method'))
     //modulo que ayuda a guardar los mensajes en el servidor 
