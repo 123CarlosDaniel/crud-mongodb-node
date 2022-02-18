@@ -18,7 +18,14 @@
     background-attachment: fixed;
 }
 
-
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+h1 a:hover {
+    color: white;
+    cursor: default;
+}
 
 .Textos-header{
     height: 450px;
