@@ -1,0 +1,13 @@
+express 
+connect-flash : sirve para enviar mensajes entre las vistas, los guarda en cookies
+bcryptjs
+express-handlebars para el renderizado 
+express-session : guarda la sesion por el lado del servidor 
+method-override: permite usar desde el formulario los metodos put y delete 
+mongoose 
+passport : para autenticar al usuario 
+
+dev dependencies 
+dotenv para almacenar varialbes de entorno 
+nodemon 
+handlebars
