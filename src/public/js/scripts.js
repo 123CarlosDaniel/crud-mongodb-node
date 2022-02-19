@@ -1,60 +1,65 @@
-const alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const palabras = ['Holaaa']
-const $titulo = document.getElementById('titulo')
-const $resultados = document.querySelectorAll('.col-6') 
-const elementos = [...$resultados]
+const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const words = ['hola', 'como', 'estas', 'osha', 'nalgona', 'XD'] 
+const $title = document.getElementById('title')
 
-const animateLetra = (spanchar) => {
-    let cambiosDeLetra = 0
-    return new Promise (resolve => {
-        const intervalor = setInterval(() => {
-            spanchar.innerHTML = alfabeto[Math.floor(Math.random() * alfabeto.length)];
-            cambiosDeLetra++;
-            if (cambiosDeLetra ==3) {
-                clearInterval(intervalor)
-            resolve()
+const array1 = [...words[0]]
+
+
+
+const randLetter = (span) =>{
+    return new Promise (resolve =>{
+    let i =0
+        const interval = setInterval(() => {
+            span.innerHTML = letters[Math.floor(Math.random()*letters.length)]
+            i++
+            if (i >3) {
+                clearInterval(interval)
+                resolve()
             }
-        }, 70);
+        },90);
     })
 }
 
-const pintarchar = async(letraindex , wordArray,indice) => {
-    if(wordArray.length === letraindex) return;
-    $titulo.value = $titulo.value.substring(1)
-    const spanChar = document.createElement("span");
-    elementos[indice].appendChild(spanChar);
 
-    await animateLetra(spanChar)
-
-    spanChar.innerHTML = wordArray[letraindex]
-    pintarchar(letraindex+1,wordArray,indice)        
-}
-
-const time = (j) => {
-    return new Promise( resolve => {
-        $titulo.value = palabras[j].toUpperCase()
-        setTimeout(() => {
-        resolve($titulo.value)
-        }, 1500);
+const deleteLetter = (span) => {
+    return new Promise( (resolve) => {
+        const interval = setTimeout(() => {
+            span.remove()
+            resolve()
+        }, 200);
     })
 }
 
-const mostrar = async(i) => {
-    const title = await time(i)
-    const wordArray = [...title]
-    pintarchar(0,wordArray,i)
+const pause = (i) => {
+    return new Promise( (resolve) => {
+        const interval = setTimeout( () => {
+            resolve()
+        }, i)
+    })
 }
 
-let i = 0
-mostrar(i)
-const inte = setInterval( () => {
-    i++
-    // mostrar(i) 
-    if(i >0) clearInterval(inte)
-    
-},3000)
-
-
-
+const renderWord = async(array) => {
+    for ( el of array) {
+        const $span = document.createElement('span')
+        $title.appendChild($span)
+        await randLetter($span)
+        $span.textContent = el.toUpperCase() 
+    }
+    await pause(500)
+    const titleChildren = [...$title.children] 
+    for (el of titleChildren){
+        await deleteLetter(el)
+    }
+}
+const renderAll =async () => {
+    for ( el of words){
+        const array = [...el]
+        await renderWord(array)
+    }
+}
+(async()=>{
+    await renderAll()
+    $title.innerHTML = 'Te amo osha  &#128536; &#128536; &#128536;'
+} )()
 
 
