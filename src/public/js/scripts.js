@@ -1,5 +1,5 @@
 const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const words = ['hola', 'como', 'estas', 'osha', 'nalgona', 'XD'] 
+const words = ['hola'] 
 const $title = document.getElementById('title')
 
 const array1 = [...words[0]]
@@ -57,9 +57,5 @@ const renderAll =async () => {
         await renderWord(array)
     }
 }
-(async()=>{
-    await renderAll()
-    $title.innerHTML = 'Te amo osha  &#128536; &#128536; &#128536;'
-} )()
 
-
+renderAll()
