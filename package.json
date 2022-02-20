@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
-    "express-handlebars": "^6.0.2",
+    "express-handlebars": "^5.2.1",
     "npm-check-updates": "^12.3.0"
   }
 }
