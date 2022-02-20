@@ -3,14 +3,14 @@ const Note = require('../models/Note')
 
 //CREAR NOTA
 notesCtrl.renderNoteForm = (req,res) => {
-    console.log(req.user.id)
+    // console.log(req.user.id)
     res.render('notes/new-note')
 }
 
 notesCtrl.createNewNote = async(req,res) => {
     const {title , description} = req.body
     const newNote = new Note({title, description})
-    newNote.user = req.user.id
+    newNote.user = req.user.id          //req.user.id lo obtiene de passport
     await newNote.save()
     req.flash('success_msg','Note Added Successfully')
     res.redirect('/notes')

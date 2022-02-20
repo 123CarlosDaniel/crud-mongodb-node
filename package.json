@@ -15,7 +15,6 @@
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.1",
@@ -24,6 +23,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
+    "express-handlebars": "^6.0.2",
     "npm-check-updates": "^12.3.0"
   }
 }

@@ -42,7 +42,7 @@ usersCtrl.singup = async (req,res) => {
 usersCtrl.renderSingInForm = (req,res) => {
     res.render('users/SignIn')
 }
-
+    //Verifica si esta loggeado o no
 usersCtrl.signin = passport.authenticate('local',{
     failureRedirect :'/users/signin',
     successRedirect : '/notes',
