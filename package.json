@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "express-handlebars": "^5.3.5",
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.1",
@@ -23,7 +24,6 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "express-handlebars": "^5.2.1",
     "npm-check-updates": "^12.3.0"
   }
 }
