@@ -1,8 +1,9 @@
 
 const mongoose = require('mongoose')
 
-const {NOTES_APP_MONGODB_HOST, NOTES_APP_MONGODB_DATABASE} = process.env
-const MONGODB_URI = `mongodb://localhost/notes-app`
+
+const MONGODB_URI= process.env.NOTES_APP_MONGODB_URI || "mongodb://localhost/notes-app"
+
 
 mongoose.connect(MONGODB_URI , {
     useUnifiedTopology : true,
